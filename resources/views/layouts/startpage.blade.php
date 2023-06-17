@@ -9,30 +9,42 @@
     
 </head>
 <style>
+
+
+
+
     body{
         font-family: "june-expt-variable", sans-serif;
         font-variation-settings: "STYL" 0;
         -webkit-font-smoothing: antialiased;
-        color: #4b4b4b;
+        color: black;
+        font-weight: 400;
     }
   
 </style>
 <body>
 @include('layouts.partials.navbar') 
 
+
 <section> 
 @include('layouts.partials.hero') 
 </section>
 
 <section>
-    @include('layouts.partials.services')
+    @include('layouts.partials.heromain')
 </section>
 
 <section>
     @include('layouts.partials.whyus')
 </section>
-
+{{--}}
+<section>
+    @include('layouts.partials.services')
+</section>
 <h1>welcome to Laravel</h1>
-    
+ {{--}}   
+ <div class="cursor"></div>
+
 </body>
 </html>
+

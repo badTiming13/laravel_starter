@@ -7,14 +7,14 @@
 
 mark{
     background-color: #e2ee06;
-    color: #4b4b4b;
+    color: black;
 }
     main{
        display: flex;
        flex-direction: column;
        
        /*border: 2px solid black;*/
-       color: #4b4b4b;
+       
        animation: text 3s alternate ;
        padding-bottom: 2rem;
        opacity: 1;
@@ -28,13 +28,17 @@ mark{
         padding-top: 1rem;
     }
     .marquee{
-        -webkit-text-stroke: 1.5px #4b4b4b;;
-        text-stroke: 1.5px #4b4b4b;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px black;;
+        text-stroke: 1px black;
+        -webkit-text-fill-color: white;
         text-fill-color: transparent;
         color: transparent;
         transition: all .5s ease;
         -webkit-font-smoothing: antialiased;
+    }
+
+    .marquee_group > span{
+        transition: text-shadow .5s ease-in-out;
     }
     .marquee_group{
         flex-shrink: 0;
@@ -44,16 +48,21 @@ mark{
         gap: 5rem;
         min-width: 100%;
         animation: scroll 30s linear infinite;
-        font-size: 3rem;
+        font-size: clamp(25px, 4vw, 52px);;
+        
     }
     .marquee_group :nth-child(2n){
         color:#e2ee06;
     }
     .marquee_group :nth-child(2n-1){
-        color: #4b4b4b;
+        color: black;
     }
     .marquee_group :nth-last-child(1){
         color: #2e9942;
+    }
+    .marquee_group > span:hover{
+        text-shadow: 4px 4px #e2ee06;
+        
     }
     .hero-block h1{
         font-size: 1.8rem;
@@ -86,7 +95,7 @@ mark{
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #4b4b4b;
+  background-color: black;
   transform: scaleX(0);
   transform-origin: top left;
   transition: transform 0.3s ease;
@@ -101,7 +110,21 @@ mark{
 .flex{
     display: flex;
 }
-
+#produce{
+   font-size: clamp(18px, 3vw, 32px);
+}
+#agency{
+   font-size: clamp(18px, 3vw, 32px);
+}
+#hero-m{
+    padding: 1rem 3rem;
+    
+}
+@media(max-width: 500px){
+    #hero-m{
+            padding: 0;
+        }
+    }
 
     @keyframes scroll{
         from{
@@ -124,12 +147,15 @@ mark{
    
 </style>
 <main>
-    <div style="padding-inline:2rem;">
-        <h1>New Webdev Agency in Vienna</h1>
+    <div id="hero-m">
+        <div style="">
+            <h1 id="agency" style="font-weight: 400;">New Webdev Agency in Vienna</h1>
+        </div>
+        <div style="">
+            <h1 id="produce" style="font-weight: 400;"><mark>We produce:</mark></h1>
+        </div>
     </div>
-    <div style="padding-inline:2rem;">
-        <h1 style="font-size: 3rem;"><mark>We produce:</mark></h1>
-    </div>
+    
 
     <div class="marquee">
         <div class="marquee_group" >
