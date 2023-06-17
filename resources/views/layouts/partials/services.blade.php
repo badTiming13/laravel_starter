@@ -1,32 +1,45 @@
 <style>
 .acc-body{
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
+    color: #4b4b4b;
 }
 #acc-t{
     font-size: 3rem;
+    color: #4b4b4b20;
+    text-transform: uppercase;
 }
 .accordion{
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 50vw;
+   
 }
 .li{
     text-align: left;
+    
 }
 .accordion > li{
     width: 100%;
-    padding-inline: 1rem;
+    
     border-bottom: 1px solid #4b4b4b;
+}
+.accordion > li:hover{
+   background-color: #e2ee06;
 }
 
 .acc-item{
     display: flex;
+    flex-direction: row-reverse;
     gap: 3rem;
     align-items: center;
+    font-weight: 100;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding-inline: 1rem;
 }
 #answer{
 padding: 0 18px;
@@ -40,6 +53,7 @@ padding: 0 18px;
 }
 .plus{
     transition: all .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    display: flex;
 }
 .acc-item.active > .plus{
     transform: rotate(180deg);
