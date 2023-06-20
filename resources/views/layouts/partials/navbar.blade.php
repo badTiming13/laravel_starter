@@ -49,10 +49,10 @@
         justify-content: space-around;
         gap: 2.5rem;
         padding: 0;
-        font-weight: 700;
+        font-weight: 400;
         font-size: larger;
     }
-    
+   
 
     @media (max-width: 1350px) {
         .nav-links{
@@ -152,8 +152,11 @@ a:hover {
 #menu-toggle{
     display: none;
     cursor: pointer;
-    font-size: clamp(16px, 4vw, 30px);
+    font-size: clamp(14px, 3vw, 24px);
     
+}
+#menu-toggle span{
+    font-weight: 400;
 }
 
 

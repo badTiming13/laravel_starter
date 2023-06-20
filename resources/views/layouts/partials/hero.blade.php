@@ -6,7 +6,7 @@
 
 
 mark{
-    background-color: #e2ee06;
+    background-color: yellow;
     color: black;
 }
     main{
@@ -101,7 +101,7 @@ mark{
   transition: transform 0.3s ease;
 }
 .contact-link{
-    color: #e2ee06;
+    color: yellow;
 }
 
 #contact a:hover::before {
@@ -112,6 +112,14 @@ mark{
 }
 #produce{
    font-size: clamp(18px, 3vw, 32px);
+   font-style: italic;
+   text-transform: lowercase;
+   
+        -webkit-text-stroke: 1px black;
+        text-stroke: 1px black;
+}
+#produce mark{
+    color: transparent;
 }
 #agency{
    font-size: clamp(18px, 3vw, 32px);

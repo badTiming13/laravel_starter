@@ -9,6 +9,13 @@
     
 </head>
 <style>
+    :root{
+        --primary-glow: conic-gradient(from 180deg at 50% 50%,#16abff33 0deg,#0885ff33 55deg,#54d6ff33 120deg,#0071ff33 160deg,transparent 360deg);
+    }
+    *{
+       box-sizing: border-box;
+      
+    }
 
 
 
@@ -19,6 +26,7 @@
         -webkit-font-smoothing: antialiased;
         color: black;
         font-weight: 400;
+        margin: 0;
     }
   
 </style>
@@ -36,6 +44,14 @@
 
 <section>
     @include('layouts.partials.whyus')
+</section>
+
+<section>
+    @include('layouts.partials.herocontact')
+</section>
+
+<section>
+    @include('layouts.partials.footer')
 </section>
 {{--}}
 <section>

@@ -10,13 +10,14 @@
     .service-blocks{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        
         gap: 10px;
     }
     .service-blocks > div{
       
   transition: all .5s ease;
         padding: 2rem;
-        border: 1px solid black;
+        border: 1px solid rgb(112, 112, 112);
     }
     .service-blocks > div:hover{
         background-image: linear-gradient(
@@ -47,6 +48,23 @@
 );
         border: transparent;
     }
+    /*Finally primary glow effect
+    .s-block{
+        position: relative;
+    }
+    
+    .s-block:after{
+       background: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+       width: 240px;
+       height: 180px;
+       z-index: -1;
+       content: '';
+        left: 50%;
+        position: absolute;
+        filter: blur(45px);
+       
+    }
+    */
     .s-block h1{
         font-size: 2rem; 
     }
@@ -72,9 +90,33 @@
         opacity: 1;
         transform: translateX(0);
     }
+  
     #h-serv{
+        position: relative;
         font-size: clamp(18px, 3vw, 32px);
+        color: transparent;
+        -webkit-text-stroke: 1px black;
+        text-stroke: 1px black;
+        width: fit-content;
+        transition: all 1s ease;
     }
+    #h-serv:before{
+        position: absolute;
+        content: '';
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: yellow;
+        top: -15px;
+        left: -20px;
+        z-index: -1;
+        
+    }
+    #h-serv:hover {
+    color: black;
+    -webkit-text-stroke: unset;
+    text-stroke: unset;
+}
 
     @media (max-width: 1200px){
         .service-blocks{
@@ -94,7 +136,7 @@
 </style>
 
 <div id="heromain">
-    <h1 id="h-serv" style="font-weight: 400;"><mark>Services</mark></h1>
+    <h1 id="h-serv" style="font-weight: 400;">Services</h1>
 
     <div class="service-blocks">
         
