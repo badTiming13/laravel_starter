@@ -63,7 +63,7 @@
     }
     @media(max-width: 500px){
         nav{
-            padding: 0;
+            padding: 0 1rem;
         }
     }
 

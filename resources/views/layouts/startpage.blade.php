@@ -30,7 +30,7 @@
     }
   
 </style>
-<body>
+<body ontouchstart="">
 @include('layouts.partials.navbar') 
 
 

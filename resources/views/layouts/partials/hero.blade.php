@@ -6,7 +6,7 @@
 
 
 mark{
-    background-color: yellow;
+    background-color:  rgba(255, 255, 0, 0.389);
     color: black;
 }
     main{
@@ -16,7 +16,7 @@ mark{
        /*border: 2px solid black;*/
        
        animation: text 3s alternate ;
-       padding-bottom: 2rem;
+       gap: 1rem;
        opacity: 1;
     }
     
@@ -101,7 +101,7 @@ mark{
   transition: transform 0.3s ease;
 }
 .contact-link{
-    color: yellow;
+    color:  rgba(255, 255, 0, 0.389);
 }
 
 #contact a:hover::before {
@@ -126,12 +126,22 @@ mark{
 }
 #hero-m{
     padding: 1rem 3rem;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 @media(max-width: 500px){
     #hero-m{
-            padding: 0;
+            padding: 0 1rem;
+            gap: .5rem;
         }
+    #agency, #produce{
+        font-size: 1.5rem;
+    }
+    .marquee_group{
+        height: 100%;
+        line-height: 2;
+    }
     }
 
     @keyframes scroll{

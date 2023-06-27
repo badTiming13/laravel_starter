@@ -1,7 +1,9 @@
 <style>
     #heromain{
-        padding:1rem 3rem;
+        padding:2rem 3rem;
         font-weight: 400;
+       
+        
     }
     #heromain h1{
        
@@ -10,43 +12,18 @@
     .service-blocks{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        
+        padding-block: 2rem;
         gap: 10px;
     }
     .service-blocks > div{
-      
+       
   transition: all .5s ease;
         padding: 2rem;
-        border: 1px solid rgb(112, 112, 112);
+       
     }
-    .service-blocks > div:hover{
-        background-image: linear-gradient(
-  35deg,
-  hsl(55deg 100% 50%) 0%,
-  hsl(55deg 98% 56%) 13%,
-  hsl(56deg 96% 59%) 19%,
-  hsl(57deg 93% 61%) 23%,
-  hsl(58deg 91% 63%) 27%,
-  hsl(59deg 88% 65%) 31%,
-  hsl(60deg 86% 66%) 34%,
-  hsl(61deg 86% 68%) 38%,
-  hsl(62deg 87% 70%) 41%,
-  hsl(63deg 88% 72%) 44%,
-  hsl(65deg 88% 74%) 47%,
-  hsl(66deg 89% 76%) 50%,
-  hsl(66deg 86% 77%) 53%,
-  hsl(66deg 84% 78%) 56%,
-  hsl(67deg 81% 78%) 59%,
-  hsl(67deg 78% 79%) 62%,
-  hsl(67deg 74% 80%) 66%,
-  hsl(67deg 70% 81%) 69%,
-  hsl(68deg 66% 82%) 73%,
-  hsl(68deg 62% 83%) 77%,
-  hsl(68deg 57% 83%) 81%,
-  hsl(68deg 51% 84%) 87%,
-  hsl(69deg 45% 85%) 100%
-);
-        border: transparent;
+    .service-blocks > div:hover, .service-blocks > div:focus, .service-blocks > div:active{
+        background:  rgba(255, 255, 0, 0.389);
+        /*border: transparent;*/
     }
     /*Finally primary glow effect
     .s-block{
@@ -66,10 +43,11 @@
     }
     */
     .s-block h1{
-        font-size: 2rem; 
+        font-size: 1.5rem; 
     }
     .s-block p{
         font-size: 1rem;
+        display: none;
     }
     .hero-svg{
         width: 3rem;
@@ -85,6 +63,14 @@
         transform: translateX(-80%);
         width: 1.5rem;
         transition: all .5s ease;
+    }
+    .s-block{
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     .s-block:hover svg{
         opacity: 1;
@@ -106,7 +92,7 @@
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
-        background: yellow;
+        background: rgba(255, 255, 0, 0.389);
         top: -15px;
         left: -20px;
         z-index: -1;
@@ -117,6 +103,7 @@
     -webkit-text-stroke: unset;
     text-stroke: unset;
 }
+
 
     @media (max-width: 1200px){
         .service-blocks{
@@ -129,8 +116,11 @@
         }
     }
     @media(max-width: 500px){
+        #h-serv{
+            font-size: 1.5rem;
+        }
         #heromain{
-            padding: 0;
+            padding: 1rem 1rem;
         }
     }
 </style>
@@ -140,7 +130,7 @@
 
     <div class="service-blocks">
         
-        <div class="s-block">
+        <div id="test" class="s-block">
             <div><svg class="hero-svg" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="layer1"> <path d="M 0 2 L 0 18 L 20 18 L 20 2 L 0 2 z M 1 3 L 19 3 L 19 5 L 1 5 L 1 3 z M 1 6 L 19 6 L 19 17 L 1 17 L 1 6 z M 7.6464844 8.1464844 L 4.2929688 11.5 L 7.6464844 14.853516 L 8.3535156 14.146484 L 5.7070312 11.5 L 8.3535156 8.8535156 L 7.6464844 8.1464844 z M 12.353516 8.1464844 L 11.646484 8.8535156 L 14.292969 11.5 L 11.646484 14.146484 L 12.353516 14.853516 L 15.707031 11.5 L 12.353516 8.1464844 z " style="fill:#222222; fill-opacity:1; stroke:none; stroke-width:0px;"></path> </g> </g></svg></div>
             <h1 style="">Webdevelopment</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quasi distinctio repellat quo beatae numquam corrupti cupiditate dolore enim, dicta neque modi provident totam velit!</p>
@@ -149,7 +139,7 @@
                 <div><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title></title> <g id="Complete"> <g id="arrow-right"> <g> <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg></div>
             </div>
         </div>
-        <div class="s-block">
+        <div id="test1" class="s-block">
             <div><svg class="hero-svg" fill="#000000"   version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511 511" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M39.5,103c1.97,0,3.91-0.8,5.3-2.2c1.4-1.39,2.2-3.33,2.2-5.3s-0.8-3.91-2.2-5.3c-1.39-1.4-3.32-2.2-5.3-2.2 s-3.91,0.8-5.3,2.2c-1.4,1.39-2.2,3.33-2.2,5.3s0.8,3.91,2.2,5.3C35.59,102.2,37.53,103,39.5,103z"></path> <path d="M63.5,103c1.98,0,3.91-0.8,5.3-2.2c1.4-1.39,2.2-3.33,2.2-5.3s-0.8-3.91-2.2-5.3c-1.39-1.4-3.33-2.2-5.3-2.2 c-1.97,0-3.91,0.8-5.3,2.2c-1.4,1.39-2.2,3.33-2.2,5.3s0.8,3.91,2.2,5.3C59.59,102.2,61.53,103,63.5,103z"></path> <path d="M87.5,103c1.97,0,3.91-0.8,5.3-2.2c1.4-1.39,2.2-3.33,2.2-5.3s-0.8-3.91-2.2-5.3c-1.39-1.4-3.33-2.2-5.3-2.2 c-1.97,0-3.91,0.8-5.3,2.2c-1.4,1.39-2.2,3.33-2.2,5.3s0.8,3.91,2.2,5.3C83.59,102.2,85.53,103,87.5,103z"></path> <path d="M119.5,103h304c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5h-304c-4.142,0-7.5,3.358-7.5,7.5S115.358,103,119.5,103z"></path> <path d="M455.5,103h16c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5h-16c-4.142,0-7.5,3.358-7.5,7.5S451.358,103,455.5,103z"></path> <path d="M439.5,168h-144c-12.958,0-23.5,10.542-23.5,23.5v0.5h-8.5c-12.958,0-23.5,10.542-23.5,23.5V280h-17v-24.5 c0-12.958-10.542-23.5-23.5-23.5h-128C58.542,232,48,242.542,48,255.5v64c0,12.958,10.542,23.5,23.5,23.5h128 c12.958,0,23.5-10.542,23.5-23.5V295h17v64.5c0,12.958,10.542,23.5,23.5,23.5h8.5v0.5c0,12.958,10.542,23.5,23.5,23.5h144 c12.958,0,23.5-10.542,23.5-23.5v-16c0-12.958-10.542-23.5-23.5-23.5h-144c-12.958,0-23.5,10.542-23.5,23.5v0.5h-8.5 c-4.687,0-8.5-3.813-8.5-8.5V295h17v0.5c0,12.958,10.542,23.5,23.5,23.5h144c12.958,0,23.5-10.542,23.5-23.5v-16 c0-12.958-10.542-23.5-23.5-23.5h-144c-12.958,0-23.5,10.542-23.5,23.5v0.5h-17v-64.5c0-4.687,3.813-8.5,8.5-8.5h8.5v0.5 c0,12.958,10.542,23.5,23.5,23.5h144c12.958,0,23.5-10.542,23.5-23.5v-16C463,178.542,452.458,168,439.5,168z M208,319.5 c0,4.687-3.813,8.5-8.5,8.5h-128c-4.687,0-8.5-3.813-8.5-8.5v-64c0-4.687,3.813-8.5,8.5-8.5h128c4.687,0,8.5,3.813,8.5,8.5V319.5z M287,367.5c0-4.687,3.813-8.5,8.5-8.5h144c4.687,0,8.5,3.813,8.5,8.5v16c0,4.687-3.813,8.5-8.5,8.5h-144 c-4.687,0-8.5-3.813-8.5-8.5V367.5z M287,279.5c0-4.687,3.813-8.5,8.5-8.5h144c4.687,0,8.5,3.813,8.5,8.5v16 c0,4.687-3.813,8.5-8.5,8.5h-144c-4.687,0-8.5-3.813-8.5-8.5V279.5z M448,207.5c0,4.687-3.813,8.5-8.5,8.5h-144 c-4.687,0-8.5-3.813-8.5-8.5v-16c0-4.687,3.813-8.5,8.5-8.5h144c4.687,0,8.5,3.813,8.5,8.5V207.5z"></path> <path d="M471.5,56h-432C17.72,56,0,73.72,0,95.5v320C0,437.28,17.72,455,39.5,455h432c21.78,0,39.5-17.72,39.5-39.5v-320 C511,73.72,493.28,56,471.5,56z M39.5,71h432c13.509,0,24.5,10.991,24.5,24.5V120H15V95.5C15,81.991,25.991,71,39.5,71z M471.5,440 h-432C25.991,440,15,429.009,15,415.5V135h481v280.5C496,429.009,485.009,440,471.5,440z"></path> </g> </g></svg></div>
             <h1>UI/UX Design</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quasi distinctio repellat quo beatae numquam corrupti cupiditate dolore enim, dicta neque modi provident totam velit!</p>

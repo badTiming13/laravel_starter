@@ -19,7 +19,7 @@
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
-        background: yellow;
+        background:  rgba(255, 255, 0, 0.389);
         top: -15px;
         left: -18px;
         z-index: -1;
@@ -27,13 +27,16 @@
     }
 
     p{
-        font-size: clamp(12px, 2vw, 24px);
+        font-size: 1rem;
         line-height: 1.5;
        
     }
     @media(max-width: 500px){
         .why-body{
-            padding: 0;
+            padding: 0 1rem;
+        }
+        .why-body h1{
+            font-size: 1.5rem;
         }
     }
 </style>
